@@ -215,7 +215,7 @@ Engine.prototype.timeLimitedGoCommand = function (infoHandler,
                 if (match) {
                     deferred.resolve(utilities.convertToMoveObject(match[1]));
                 } else {
-                    throw new Error('Invalid format of bestmove. Expected "bestmove <move>". Returned "' + lines[i] + '"');
+                    console.log('Invalid format of bestmove. Expected "bestmove <move>". Returned "' + lines[i] + '"');
                 }
             }
         }
@@ -335,7 +335,7 @@ Engine.prototype.stopCommand = function () {
                 if (match) {
                     deferred.resolve(utilities.convertToMoveObject(match[1]));
                 } else {
-                    throw new Error('Invalid format of bestmove. Expected "bestmove <move>". Returned "' + lines[i] + '"');
+                    console.log('Invalid format of bestmove. Expected "bestmove <move>". Returned "' + lines[i] + '"');
                 }
             }
         }
